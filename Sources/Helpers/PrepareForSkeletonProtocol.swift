@@ -8,26 +8,26 @@
 
 import UIKit
 
-protocol PrepareForSkeleton {
+public protocol PrepareForSkeleton {
     func prepareViewForSkeleton() 
 }
 
 extension UILabel: PrepareForSkeleton {
-    func prepareViewForSkeleton() {
+    open func prepareViewForSkeleton() {
         text = nil
         resignFirstResponder()
     }
 }
 
 extension UITextView: PrepareForSkeleton {
-    func prepareViewForSkeleton() {
+    open func prepareViewForSkeleton() {
         text = nil
         resignFirstResponder()
     }
 }
 
 extension UIImageView: PrepareForSkeleton {
-    func prepareViewForSkeleton() {
+    open func prepareViewForSkeleton() {
         image = nil
     }
 }
